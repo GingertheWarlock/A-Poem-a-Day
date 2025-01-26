@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem by Rumi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .poem {
+            white-space: pre-wrap; /* Preserve formatting of the poem */
+        }
+        .translation {
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+        }
+        .translation p {
+            margin: 0 0 10px;
+            text-align: left;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mathnawi VI: 2955-2962</h1>
+        <div class="poem">
+            The spirit is like an ant, and the body like a grain of wheat
+            which the ant carries to and fro continually.
+            The ant knows that the grains of which it has taken charge
+            will change and become assimilated.
+            One ant picks up a grain of barley on the road;
+            another ant picks up a grain of wheat and runs away.
+            The barley doesn’t hurry to the wheat,
+            but the ant comes to the ant, yes it does.
+            The going of the barley to the wheat is merely consequential:
+            it’s the ant that returns to its own kind.
+            Don’t say, “Why did the wheat go to the barley?”
+            Fix your eye on the holder, not on that which is held.
+            As when a black ant moves along on a black felt cloth:
+            the ant is hidden from view; only the grain is visible on its way.
+            But Reason says: “Look well to your eye:
+            when does a grain ever move along without a carrier?”
+
+            “Rumi: Jewels of Remembrance”
+            Camille and Kabir Helminski
+            Threshold Books, 1996
+        </div>
+        <button class="button" onclick="toggleTranslation()">显示译文</button>
+        <div class="translation">
+            <p>精神如蚂蚁，身体如麦粒，</p>
+            <p>蚂蚁不断地来回搬运麦粒。</p>
+            <p>蚂蚁明白，它所携带的谷物会发生变化并被吸收。</p>
+            <p>一只蚂蚁在路上拾起一粒大麦，</p>
+            <p>另一只蚂蚁则捡起一粒小麦匆匆离去。</p>
+            <p>大麦并不会主动赶向小麦，</p>
+            <p>而蚂蚁却会归向同类，是的，确实如此。</p>
+            <p>大麦去向小麦仅仅是表象：</p>
+            <p>归根结底是蚂蚁回到自己的同类身边。</p>
+            <p>不要问：“为什么小麦会跑向大麦？”</p>
+            <p>将目光聚焦在携带者，而非被携带之物。</p>
+            <p>就像一只黑蚂蚁爬过黑色毛毡，</p>
+            <p>蚂蚁隐藏不见，只看得见麦粒在移动。</p>
+            <p>但理智告诉我们：“睁大你的眼睛看清楚：</p>
+            <p>哪有谷粒能自己移动，而没有携带者？”</p>
+            <p>——选自《鲁米：记忆的珍宝》</p>
+            <p>卡米尔与卡比尔·赫尔明斯基编著</p>
+            <p>门槛出版社，1996</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleTranslation() {
+            const translationDiv = document.querySelector('.translation');
+            const button = document.querySelector('.button');
+
+            if (translationDiv.style.display === 'none' || translationDiv.style.display === '') {
+                translationDiv.style.display = 'block';
+                button.textContent = '隐藏译文';
+            } else {
+                translationDiv.style.display = 'none';
+                button.textContent = '显示译文';
+            }
+        }
+    </script>
+</body>
+</html>
