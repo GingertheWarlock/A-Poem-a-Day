@@ -25,6 +25,28 @@
         .poem {
             white-space: pre-wrap; /* Preserve formatting of the poem */
         }
+        .translation {
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+        }
+        .translation p {
+            margin: 0 0 10px;
+            text-align: left;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -52,6 +74,42 @@
             Camille and Kabir Helminski
             Threshold Books, 1996
         </div>
+        <button class="button" onclick="toggleTranslation()">显示译文</button>
+        <div class="translation">
+            <p>精神如蚂蚁，身体如麦粒，</p>
+            <p>蚂蚁不断地来回搬运麦粒。</p>
+            <p>蚂蚁明白，它所携带的谷物会发生变化并被吸收。</p>
+            <p>一只蚂蚁在路上拾起一粒大麦，</p>
+            <p>另一只蚂蚁则捡起一粒小麦匆匆离去。</p>
+            <p>大麦并不会主动赶向小麦，</p>
+            <p>而蚂蚁却会归向同类，是的，确实如此。</p>
+            <p>大麦去向小麦仅仅是表象：</p>
+            <p>归根结底是蚂蚁回到自己的同类身边。</p>
+            <p>不要问：“为什么小麦会跑向大麦？”</p>
+            <p>将目光聚焦在携带者，而非被携带之物。</p>
+            <p>就像一只黑蚂蚁爬过黑色毛毡，</p>
+            <p>蚂蚁隐藏不见，只看得见麦粒在移动。</p>
+            <p>但理智告诉我们：“睁大你的眼睛看清楚：</p>
+            <p>哪有谷粒能自己移动，而没有携带者？”</p>
+            <p>——选自《鲁米：记忆的珍宝》</p>
+            <p>卡米尔与卡比尔·赫尔明斯基编著</p>
+            <p>门槛出版社，1996</p>
+        </div>
     </div>
+
+    <script>
+        function toggleTranslation() {
+            const translationDiv = document.querySelector('.translation');
+            const button = document.querySelector('.button');
+
+            if (translationDiv.style.display === 'none' || translationDiv.style.display === '') {
+                translationDiv.style.display = 'block';
+                button.textContent = '隐藏译文';
+            } else {
+                translationDiv.style.display = 'none';
+                button.textContent = '显示译文';
+            }
+        }
+    </script>
 </body>
 </html>
